@@ -5,6 +5,24 @@
 
 # Your script starts here
 
+def get_name
+  puts "What is your name?"
+  return gets.chomp
+end
+
+def get_age
+  puts "What is your age?"
+  return gets.chomp.to_i
+end
+
+people = []
+
+(1..3).each do
+  person = {name: get_name, age: get_age}
+  # puts person
+  people << person
+end
+
 # Your script ends here
 
 puts people.inspect
