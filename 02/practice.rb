@@ -50,6 +50,14 @@ end
 
 ## Your script starts here
 
-
+CANDIDATES.map do |candidate|
+  email candidate[:email] do
+    interviewers_aux = INTERVIEWERS.clone
+    first_interviewer = interviewers_aux.delete_at(rand(interviewers_aux.length))[:name]
+    second_interviewer = interviewers_aux.delete_at(rand(interviewers_aux.length))[:name]
+    puts "Hola #{candidate[:name]}"
+    puts "Tus entrevistadores son #{first_interviewer} y #{second_interviewer}"
+  end
+end
 
 ## Your script ends here
