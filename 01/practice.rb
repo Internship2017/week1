@@ -7,12 +7,12 @@
 
 def get_name
   puts "What is your name?"
-  return gets.chomp
+  gets.chomp
 end
 
 def get_age
   puts "What is your age?"
-  return gets.chomp.to_i
+  gets.chomp.to_i
 end
 
 people = []
