@@ -12,4 +12,15 @@ require 'github_api'
 
 ## Your code starts here
 
+module Sepomex
+	class Client
+	end
+end
+
+module Sepomex
+	class State
+		
+	end
+end
+
 ## Your code ends here

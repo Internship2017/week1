@@ -9,7 +9,44 @@ INTERVIEWERS = %w{ Adrian Colin Rafa Edo Kuri }
 CANDIDATES = %w{ Arturo Ricardo Rafael Pablo Mauricio Jurgen }
 
 ## Your code starts here
+class Scheduler
+	def assign_interviews(canName, intname, time)
+		times = ["9:00", "9:30", "10:00", "10:30"]
 
+	end
+end
+
+class Person
+	attr_reader :name
+
+	def initialize(name)
+		@name = name
+	end
+end
+
+class Interviewer < Person 
+	include Interview
+
+	def interviews
+
+	end
+
+	def interviewers
+		@intNames = INTERVIEWERS
+	end
+end
+
+class Interview
+	attr_accessor :time
+
+	def init(time)
+		@time = time
+	end
+end
+
+class Candidate < Person
+	
+end
 ## Your code ends here
 
 scheduler = Scheduler.new

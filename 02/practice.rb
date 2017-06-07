@@ -21,7 +21,7 @@ INTERVIEWERS = [
 CANDIDATES = [
   {:name=>"Jesus Lerma", :email=>"hacker1@gmail.com"},
   {:name=>"Alejandro Sandoval", :email=>"hacker2@gmail.com"},
-  {:name=>"Eduardo Romero", :email=>"hacker3@outlook.com"},
+  {:name=>"Eduardo Romero", :email=>"hacker3@outlook.com"}, 
   {:name=>"Benjamin Moreno", :email=>"hacker4@cedim.edu.mx"},
   {:name=>"William Alvarez", :email=>"hacker5@gmail.com"},
   {:name=>"Pablo De Jess Garca", :email=>"hacker6@hotmail.com"},
@@ -47,9 +47,15 @@ def email(address, &block)
   puts "Sending E-mail to: #{address}"
   yield
 end
-
 ## Your script starts here
 
+CANDIDATES.each do |candidate|  
+  puts "Sending E-mail to: #{candidate[:email]}"
+  puts "Hola #{candidate[:name]}"
 
+  first = INTERVIEWERS[rand(5)][:name]
+  second = INTERVIEWERS[rand(5)][:email]
+  puts "Your interviewers will be #{first} and #{second}"
+end
 
 ## Your script ends here
