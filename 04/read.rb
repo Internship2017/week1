@@ -51,7 +51,16 @@ RestClient.get 'http://www.google.com'
 ## Getting Resources
 raw_cities = RestClient.get 'http://www.reserbus.mx/api/v1/cities.json'
 
+#raw_cities.body to show the content
+
 ## Using those resources
 require 'json'
 cities = JSON.parse(raw_cities)
 cities.each { |city| puts city["name"] }
+
+states = RestClient.get 'http://sepomex.icalialabs.com/api/v1/states'
+json_states = JSON.parse(states.body)
+
+json_states["states"].each do |state|
+  puts state["name"]
+end

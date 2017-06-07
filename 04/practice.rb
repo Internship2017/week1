@@ -11,5 +11,34 @@ require 'rubygems'
 require 'github_api'
 
 ## Your code starts here
+module Repositories
+	class Client
+		def initialize
+			@repos    = Github::Client::Repos.new
+		end
+	    def repos(user)
+		    response = @repos.list user: user
+	        response.map { |repo| Repositories::Repo.new(repo)}
+	    end
+	end
+end
 
+module Repositories
+	class Repo
+		attr_reader :name, :description, :stargazers_count, :url
+		
+		def initialize(repo)
+			@name = repo.name
+			@description = repo.description
+			@stargazers_count = repo.stargazers_count
+			@url = repo.url
+		end
+	end
+end
+
+cliente = Repositories::Client.new()
+repos = cliente.repos("israelhz")
+repos.each do |repo|
+	puts repo.name
+end
 ## Your code ends here
