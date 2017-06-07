@@ -43,13 +43,15 @@ CANDIDATES = [
   {:name=>"Daniel Brambila", :email=>"hacker22@gmail.com"}
 ]
 
-def email(address, &block)
+entrevistador1 =rand(5)
+entrevistador2 =rand(5)
+def email(address, entrevistado,INTERVIEWERS[entrevistador1],INTERVIEWERS[entrevistador2])
   puts "Sending E-mail to: #{address}"
-  yield
+  puts "Hola #{name}"
+  puts "Tus entrevistadores son: #{entrevistador1} y #{entrevistador2}"
 end
 
 ## Your script starts here
-
 
 
 ## Your script ends here

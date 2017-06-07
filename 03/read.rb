@@ -28,9 +28,26 @@ Area.circle(5) # 78.54
 
 class Person
   # initialize sets up attributes for a new object
+  attr_accessor :name, :lastname
   def initialize(name, lastname)
     @name = name
     @lastname = lastname
+  end
+
+  def lastname
+    @lastname
+  end
+
+  def lastname=(lastname)
+    @lastname=lastname
+  end
+
+  def name
+    @name
+  end
+
+  def name=(name)
+    @name=name
   end
 end
 
