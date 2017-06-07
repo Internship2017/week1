@@ -48,8 +48,12 @@ require 'rest-client'
 ## Getting WebSites 
 RestClient.get 'http://www.google.com'
 
+
+
 ## Getting Resources
-raw_cities = RestClient.get 'http://www.reserbus.mx/api/v1/cities.json'
+raw_cities = RestClient.get 'http://sepomex.icalialabs.com/api/v1/states'
+http://sepomex.icalialabs.com/api/v1/states
+
 
 ## Using those resources
 require 'json'
