@@ -26,7 +26,25 @@ Area.circle(5) # 78.54
 # Classes
 # Attributes: State
 
+module PersonalDetails
+    def full_name
+      "#{@name} + #{@lastname}"
+    end
+end
+
+class Intern
+  include PersonalDetails
+  attr_accessor :name, :lastname
+  # initialize sets up attributes for a new object
+  def initialize(name, lastname)
+    @name = name
+    @lastname = lastname
+  end
+end
+
 class Person
+  include PersonalDetails
+  attr_accessor :name, :lastname
   # initialize sets up attributes for a new object
   def initialize(name, lastname)
     @name = name
@@ -83,7 +101,7 @@ class Horse
   end
   
   def info
-    "#{Horse.informacion} named #{@name}" 
+    "#{Horse.info} named #{@name}" 
   end
   
 end

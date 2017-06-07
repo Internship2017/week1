@@ -12,13 +12,18 @@ def repeater(string, repeat)
   end
 end
 
+def perform_transaction(from:, to:, amount:)
+end
+
+#perform_transaction(from: 12, to:123, 100)
+
 repeater('Hi all', 10) # Hi all \n Hi all ...
 
 # Blocks & Yield
 
 def email(name='Adrian', &block)
   puts "Hola #{name}"
-  yield
+  yield if block_given?
   puts "Espero que estes muy bien, contestame pronto"
 end
 

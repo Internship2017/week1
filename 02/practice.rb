@@ -50,6 +50,15 @@ end
 
 ## Your script starts here
 
+def set_up_interview(candidate)
+  interviewers = INTERVIEWERS.sample(2)
+  email candidate[:email] do
+    puts "Hola #{candidate[:name]}"
+    puts "Tus entrevistadores son #{interviewers[0][:name]} y #{interviewers[1][:name]}" 
+  end
+end
+
+CANDIDATES.map {|candidate| set_up_interview(candidate)}
 
 
 ## Your script ends here

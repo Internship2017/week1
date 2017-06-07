@@ -5,6 +5,15 @@
 
 # Your script starts here
 
+people = []
+(1..3).each do |number|
+	puts "Name #{number}"
+	person = {:name => gets().strip}
+	puts "Age #{number}"
+	person[:age] = gets().to_i
+	people.push(person)
+end
+
 # Your script ends here
 
 puts people.inspect
