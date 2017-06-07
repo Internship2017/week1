@@ -11,6 +11,8 @@ hacker_you = gets() # input
 # http://ruby-doc.org/core-2.2.0/Hash.html
 # Key => Value
 person = { :name => 'Juan', :lastname => 'Perez', :age => 20 }
+# NUEVO METODO DE HASHES>>>
+person = {name: "Juan", lastname: "Perez", age: 20}
 # Access an element
 person[:name] # => 'Juan'
 # Set an element

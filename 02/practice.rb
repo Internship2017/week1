@@ -48,8 +48,13 @@ def email(address, &block)
   yield
 end
 
-## Your script starts here
+body = -> (candidate,interviewer1,interviewer2){  
+  puts "Hola #{candidate}"
+  puts "Tus entrevistadores son #{interviewer1} y #{interviewer2}"
+}
 
+CANDIDATES.each do |candidate|
+  interviewers = INTERVIEWERS.sample(2)
+  body.yield(candidate[:name],interviewers[0][:name], interviewers[1][:name])
 
-
-## Your script ends here
+end

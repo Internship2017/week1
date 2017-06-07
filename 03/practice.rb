@@ -9,6 +9,50 @@ INTERVIEWERS = %w{ Adrian Colin Rafa Edo Kuri }
 CANDIDATES = %w{ Arturo Ricardo Rafael Pablo Mauricio Jurgen }
 
 ## Your code starts here
+class Interview
+  attr_accessor :time, :candidate
+end
+
+class Person
+  attr_accessor :name
+
+  def initialize(name)
+    @name = name
+  end
+end
+
+class Interviewer < Person
+  def interviews
+
+  end
+
+end
+
+class Candidate < Person
+
+end
+
+class Scheduler
+  attr_accessor :candidates
+  attr_accessor :interviewers
+  def initialize
+    @candidates = CANDIDATES.map do |candidate|
+      Candidate.new(candidate)
+    end
+    @interviewers = INTERVIEWERS.map do |interviewer|
+      Interviewer.new(interviewer)
+    end
+  end
+
+  def assign_interviews
+    @interviewers.
+
+  end
+  def interviewers
+    @interviewers = interviewers
+  end
+
+end
 
 ## Your code ends here
 

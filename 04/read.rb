@@ -45,7 +45,7 @@ puts GitHub::Markup.render('4.markdown', File.read('./read.markdown'))
 ## Reference: https://github.com/rest-client/rest-client
 require 'rest-client'
 
-## Getting WebSites 
+## Getting WebSites
 RestClient.get 'http://www.google.com'
 
 ## Getting Resources
@@ -55,3 +55,36 @@ raw_cities = RestClient.get 'http://www.reserbus.mx/api/v1/cities.json'
 require 'json'
 cities = JSON.parse(raw_cities)
 cities.each { |city| puts city["name"] }
+
+module Sepomex
+  class Client
+    attr_reader :data, :states
+    def initialize
+      data = RestClient.get 'http://sepomex.icalialabs.com/api/v1/states'
+      @states = JSON.parse(@data)
+    end
+
+    def get_states
+      @states.body["states"].map do |state|
+        Sepomex::State.new(state["name"])
+      end
+    end
+
+  end
+end
+
+module Sepomex
+  class State
+    attr_accessor :name
+    def initialize(name)
+      @name = name
+    end
+  end
+end
+
+client = Sepomex::Client.new
+states = client.get_states
+
+states.each do |state|
+  puts state.name
+end

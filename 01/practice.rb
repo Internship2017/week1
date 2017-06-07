@@ -4,6 +4,16 @@
 # http://ruby-doc.org/core-2.2.0/String.html
 
 # Your script starts here
+people = []
+person = {}
+
+(1..3).each do |n|
+  puts "Name: "
+  person[:name] = gets().strip
+  puts "Age: "
+  person[:age] = gets().to_i
+  people << person
+end
 
 # Your script ends here
 

@@ -3,7 +3,7 @@
 
 module Area
 
-  PI = 3.1416
+  PI = 3.1416.freeze
 
   def self.square(n)
     n * n
@@ -32,6 +32,15 @@ class Person
     @name = name
     @lastname = lastname
   end
+
+  def name
+    @name
+  end
+
+  def name=(name)
+    @name = name
+  end
+
 end
 
 # Create an object
@@ -73,22 +82,21 @@ cat.kick # => miaou [Please dont kick me]
 # Class Methods
 # Bahaviour of the class
 class Horse
-  
+
   def initialize(name)
     @name = name
   end
-  
+
   def self.info
     'Big Animal'
   end
-  
+
   def info
-    "#{Horse.informacion} named #{@name}" 
+    "#{Horse.informacion} named #{@name}"
   end
-  
+
 end
 
 horse = Horse.new('London')
 puts Horse.info # => Big Animal
 puts horse.info # => Big Animal named London
-  
