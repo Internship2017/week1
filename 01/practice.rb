@@ -5,6 +5,17 @@
 
 # Your script starts here
 
+people = []
+
+(1..3).each do
+	puts "Name"
+	name = gets()
+	puts "Age"
+	age = gets()
+	person = {:name => name, :age => age} 
+	people << person
+	end
+
 # Your script ends here
 
 puts people.inspect

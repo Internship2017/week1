@@ -10,6 +10,51 @@ CANDIDATES = %w{ Arturo Ricardo Rafael Pablo Mauricio Jurgen }
 
 ## Your code starts here
 
+class Scheduler 
+
+	def assign_interviews
+
+		INTERVIEWERS.each do
+			
+
+
+		end
+
+
+	end
+
+	def interviewers
+		
+
+
+	end
+
+end
+
+class Person
+	attr_reader :name
+
+	def initialize(name)
+		@name = name
+	end
+end
+
+class Candidate < Person
+end
+
+class Interviewer < Person
+
+	def interviews
+
+
+	end
+
+end
+
+class Interview
+	attr_reader :time, :candidate
+end
+
 ## Your code ends here
 
 scheduler = Scheduler.new

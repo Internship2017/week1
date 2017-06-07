@@ -50,6 +50,23 @@ end
 
 ## Your script starts here
 
+CANDIDATES.each do |candid|
+
+  email candid[:email] do
+
+   puts "Hola #{candid[:name]}"
+   puts "Tus entrevistadores son"
+   puts INTERVIEWERS[rand(5)][:name]
+   puts INTERVIEWERS[rand(5)][:name]
+
+  end
+end
+
+
+
+
+
+
 
 
 ## Your script ends here
