@@ -10,7 +10,61 @@ CANDIDATES = %w{ Arturo Ricardo Rafael Pablo Mauricio Jurgen }
 
 ## Your code starts here
 
-## Your code ends here
+class Interviewer
+  attr_accessor :name, :interviews
+
+  def initialize(name)
+    @name = name
+    @interviews = []
+  end
+end
+
+class Candidate
+  attr_accessor :name
+
+  def initialize(name)
+    @name = name
+  end
+end
+
+class Scheduler
+  attr_accessor :interviewers, :candidates
+
+  def initialize()
+    @interviewers = []
+    INTERVIEWERS.each do |interviewer|
+      interviewers.push(Interviewer.new(interviewer))
+    end
+    @candidates = []
+    CANDIDATES.each do |candidate|
+      candidates.push(Interviewer.new(candidate))
+    end
+  end
+
+  def assign_interviews()
+    hours = ["9:00", "9:30", "10:00", "10:30"]
+    @interviewers.each do |interviewer|
+        hours.each do |hour|
+          if !@candidates.empty?
+            interviewer.interviews.push(Interview.new(@candidates.pop, hour))
+          else
+            interviewer.interviews.push(Interview.new(Candidate.new("-"), hour))
+          end
+      end
+    end
+  end
+end
+
+class Interview
+  attr_accessor :candidate, :time
+
+  def initialize(candidate, time)
+    @candidate = candidate
+    @time = time
+  end
+end
+
+# Your code ends here
 
 scheduler = Scheduler.new
 
