@@ -49,9 +49,40 @@ require 'rest-client'
 RestClient.get 'http://www.google.com'
 
 ## Getting Resources
-raw_cities = RestClient.get 'http://www.reserbus.mx/api/v1/cities.json'
+raw_cities = RestClient.get 'http://sepomex.icalialabs.com/api/v1/states'
 
 ## Using those resources
 require 'json'
 cities = JSON.parse(raw_cities)
 cities.each { |city| puts city["name"] }
+
+
+module Sepomex
+  class Client
+    attr_accessor :states
+
+    def initializer (states)
+      @states=states
+    end
+
+    def get_states
+      []
+  end
+end
+
+module Sepomex
+  class State
+    attr_accessor :name
+
+    def initializer(name)
+      @name=name
+    end
+  end
+end
+
+client = Sepomex::Client.new
+states = client.get_states
+
+states.each do |state|
+  puts state.name
+end
