@@ -26,5 +26,6 @@ internship.hackers.each { |hacker| puts hacker }
 
 # Wrive a file
 file = File.open('./support/output_hackers.csv', 'w+')
+file.write("Nombre,Apellido,Email\n")
 file.write(internship.hackers.map(&:to_csv).join("\n"))
 file.close
