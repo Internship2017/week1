@@ -2,7 +2,7 @@
 # http://ruby-doc.org/core-2.2.0/File.html
 
 # Read a file
-File.read('./support/countries.txt')
+puts File.read('./support/countries.txt')
 
 # Process a file lines
 File.readlines('./support/countries.txt').each do |country|
@@ -26,5 +26,6 @@ internship.hackers.each { |hacker| puts hacker }
 
 # Wrive a file
 file = File.open('./support/output_hackers.csv', 'w+')
+file.write("Nombre,Apellido,Email\n")
 file.write(internship.hackers.map(&:to_csv).join("\n"))
 file.close

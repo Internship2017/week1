@@ -19,22 +19,27 @@
         <div>
           <div class="posts">
             <h1 class="content-subhead">Profiles</h1>
-            <section class="profile">
-              <header class="profile-header">
-                <img class="profile-avatar" alt="<name>" height="48" width="48" src="img/<image>.png">
-                <h2 class="profile-name">Abraham Kuri</h2>
-                <p class="profile-meta">
-                Age <a href="#" class="profile-age"></a>
-                <a class="profile-social profile-github" href="#">Github</a>
-                <a class="profile-social profile-twitter" href="#">Twitter</a>
-                </p>
-              </header>
-              <div class="profile-bio">
-                <p data-editable>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-              </div>
-            </section>
+            <% @authors.each do |author| %>
+                <section class="profile">
+                  <header class="profile-header">
+                    <img class="profile-avatar" alt="
+                        <%= author.author %> img " height="48" width="48" src="img/<%= author.image %>.png">
+                    <h2 class="profile-name"> <%= author.author %> </h2>
+                    <p class="profile-meta">
+                      <a href="#" class="profile-age"> </a>
+                      <a class="profile-social profile-github" href="#"> <%= author.git %>  </a>
+                      <a class="profile-social profile-twitter" href="#"> <%= author.twitter %> </a>
+                    </p>
+                  </header>
+                  <div class="profile-bio">
+                    <h1> <%= author.title %> </h1>
+                    <p data-editable>
+
+                      <%= author.description %>
+                    </p>
+                  </div>
+                </section>
+            <% end %>
           </div>
         </div>
       </div>

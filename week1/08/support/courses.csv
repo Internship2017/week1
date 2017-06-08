@@ -1,8 +1,8 @@
-title,description,author,tags
-Ruby & Javascript,Ruby and javascripts basics for hacking,Adrian,"ruby, javascript"
-HTTP & Rails,"Web protocols , how the web works & Rails intro",Amed,"ruby, rails"
-Advanced Rails,Rails & Test driven development,Ana,rails
-API & Advance API,"APIs, best practices, user handling and e-mail",Kuri,rails
-Ember JS,Javascript MVC framework,Benito,javascript
-Product,"Agile, SCRUM, Wireframing & such.",Edo,product
-Hacking,Pure hacks on projects,JP,"product,ruby,javascript"
+title,description,author,git,twitter,img
+Ruby & Javascript,Ruby and javascripts basics for hacking,Adrian,git,twitter,adrian.png
+HTTP & Rails,"Web protocols , how the web works & Rails intro",Amed,git,twitter,amed.png
+Advanced Rails,Rails & Test driven development,Ana,git,twitter,ana.png
+API & Advance API,"APIs, best practices, user handling and e-mail",Kuri,git,twitter,kuri.png
+Ember JS,Javascript MVC framework,Benito,git,twitter,benito.png
+Product,"Agile, SCRUM, Wireframing & such.",Edo,git,twitter,edo.png
+Hacking,Pure hacks on projects,JP,git,twitter,jp.png

@@ -52,7 +52,7 @@ RestClient.get 'http://www.google.com'
 
 ## Getting Resources
 raw_cities = RestClient.get 'http://sepomex.icalialabs.com/api/v1/states'
-http://sepomex.icalialabs.com/api/v1/states
+# http://sepomex.icalialabs.com/api/v1/states
 
 
 ## Using those resources

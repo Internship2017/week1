@@ -13,6 +13,7 @@ dom = Nokogiri::HTML(document)
 # Traverse the DOM
 movies = []
 
+
 dom.css('#Top-Box-Office tr').each do |movie_tr|
   score = movie_tr.css('.left_col .tMeterScore').text
   name = movie_tr.css('.middle_col a').text

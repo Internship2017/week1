@@ -10,4 +10,36 @@ require 'nokogiri'
 
 # Your code starts here
 
+class Repo
+  attr_accessor :name, :forks, :stars
+
+  def initialize(name, forks, stars)
+    @name = name
+    @forks = forks
+    @stars = stars
+  end
+end
+
+# Read the html
+document = RestClient.get('https://github.com/explore')
+# Model the DOM
+dom = Nokogiri::HTML(document)
+# Traverse the DOM
+repos = []
+
+dom.css('.clearfix li').each do |repo_li|
+  fork_stars = repo_li.css('span.collection-stat.tooltipped.tooltipped-n')
+  forks = fork_stars[0].text
+  stars =  fork_stars[1].text
+  name = repo_li.css('a.repo-name.css-truncate.css-truncate-target').text
+
+  repos << Repo.new(name, forks, stars)
+
+end
+
+# Repos
+repos.each do |repo|
+  puts repo.inspect
+end
+
 # Your code ends here
