@@ -1,0 +1,93 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Area	03/read.rb	/^module Area$/;"	m
+Author	08/lib/Author.rb	/^class Author$/;"	c
+Candidate	03/practice.rb	/^class Candidate$/;"	c
+Cat	03/read.rb	/^class Cat$/;"	c
+Client	04/exercise.rb	/^  class Client$/;"	c	class:Sepomex
+Course	08/lib/Course.rb	/^class Course$/;"	c
+CsvReader	08/lib/CsvReader.rb	/^class CsvReader$/;"	c
+Dog	03/read.rb	/^class Dog$/;"	c
+Gag	07/support/gag.rb	/^class Gag$/;"	c
+GagDigestor	07/support/gag_digestor.rb	/^class GagDigestor$/;"	c
+GagReader	07/support/gag_reader.rb	/^class GagReader$/;"	c
+Ghub	04/practice.rb	/^module Ghub$/;"	m
+Horse	03/read.rb	/^class Horse$/;"	c
+Intern	05/lib/hacker.rb	/^class Intern$/;"	c
+Internship	05/lib/internship.rb	/^class Internship$/;"	c
+Interview	03/practice.rb	/^class Interview$/;"	c
+Interviewer	03/practice.rb	/^class Interviewer$/;"	c
+Mailer	04/read.rb	/^module Mailer$/;"	m
+Page	07/practice.rb	/^class Page$/;"	c
+Page	07/read.rb	/^class Page$/;"	c
+Page	08/lib/Page.rb	/^class Page$/;"	c
+Person	03/read.rb	/^class Person$/;"	c
+Repo	04/practice.rb	/^  class Repo$/;"	c	class:Ghub
+Scheduler	03/practice.rb	/^class Scheduler$/;"	c
+Sepomex	04/exercise.rb	/^module Sepomex$/;"	m
+State	04/exercise.rb	/^  class State$/;"	c	class:Sepomex
+User	04/practice.rb	/^  class User$/;"	c	class:Ghub
+User	04/read.rb	/^class User$/;"	c
+assign_interviews	03/practice.rb	/^  def assign_interviews()$/;"	f	class:Scheduler
+circle	03/read.rb	/^  def self.circle(r)$/;"	F	class:Area
+commented_gag	07/support/gag_reader.rb	/^  def commented_gag$/;"	f	class:GagReader
+content	07/practice.rb	/^  def content$/;"	f	class:Page
+content	07/read.rb	/^  def content$/;"	f	class:Page
+cost	09/read.js	/^var cost = 1000;$/;"	v
+courses	08/lib/CsvReader.rb	/^  def courses$/;"	f	class:CsvReader
+courses	09/read.js	/^var courses = ["Ruby\/JS 101", "HTTP & Rails", "Advanced Rails"];$/;"	v
+document	07/support/gag_reader.rb	/^  def document$/;"	f	class:GagReader
+dom	07/support/gag_reader.rb	/^  def dom$/;"	f	class:GagReader
+email	02/practice.rb	/^def email(address, &block)$/;"	f
+email	02/read.rb	/^def email(name='Adrian', &block)$/;"	f
+email_domain	04/read.rb	/^  def email_domain$/;"	f	class:Mailer
+email_message	04/read.rb	/^  def email_message(message)$/;"	f	class:Mailer
+fetch_gags	07/support/gag_reader.rb	/^  def fetch_gags$/;"	f	class:GagReader
+getSchoolDebt	09/read.js	/^var getSchoolDebt = function(studentList){$/;"	f
+get_age	01/practice.rb	/^def get_age$/;"	f
+get_name	01/practice.rb	/^def get_name$/;"	f
+get_states	04/exercise.rb	/^    def get_states$/;"	f	class:Sepomex.Client
+info	03/read.rb	/^  def info$/;"	f	class:Horse
+info	03/read.rb	/^  def self.info$/;"	F	class:Horse
+initialize	03/practice.rb	/^  def initialize()$/;"	f	class:Scheduler
+initialize	03/practice.rb	/^  def initialize(candidate, time)$/;"	f	class:Interview
+initialize	03/practice.rb	/^  def initialize(name)$/;"	f	class:Candidate
+initialize	03/practice.rb	/^  def initialize(name)$/;"	f	class:Interviewer
+initialize	03/read.rb	/^  def initialize()$/;"	f	class:Dog
+initialize	03/read.rb	/^  def initialize(name)$/;"	f	class:Horse
+initialize	03/read.rb	/^  def initialize(name, lastname)$/;"	f	class:Person
+initialize	04/exercise.rb	/^    def initialize()$/;"	f	class:Sepomex.Client
+initialize	04/exercise.rb	/^    def initialize(id, name, cities_count)$/;"	f	class:Sepomex.State
+initialize	04/practice.rb	/^    def initialize(name)$/;"	f	class:Ghub.User
+initialize	04/practice.rb	/^    def initialize(repo_raw)$/;"	f	class:Ghub.Repo
+initialize	04/read.rb	/^  def initialize(name, email)$/;"	f	class:User
+initialize	05/lib/hacker.rb	/^  def initialize(name, lastname, email)$/;"	f	class:Intern
+initialize	05/lib/internship.rb	/^  def initialize$/;"	f	class:Internship
+initialize	07/support/gag.rb	/^  def initialize(title, points,comment_count, image_url)$/;"	f	class:Gag
+initialize	07/support/gag_digestor.rb	/^  def initialize(dom)$/;"	f	class:GagDigestor
+initialize	07/support/gag_reader.rb	/^  def initialize$/;"	f	class:GagReader
+initialize	08/lib/Author.rb	/^  def initialize(name)$/;"	f	class:Author
+initialize	08/lib/Course.rb	/^  def initialize(title, description, author, tags)$/;"	f	class:Course
+instructor.companies	09/read.js	/^  'subject': 'Ruby && Javascript',$/;"	p
+instructor.name	09/read.js	/^var instructor = {$/;"	p
+instructor.subject	09/read.js	/^  'name': 'Adrian Cuadros',$/;"	p
+kick	03/read.rb	/^  def kick$/;"	f	class:Cat
+loved_gag	07/support/gag_reader.rb	/^  def loved_gag$/;"	f	class:GagReader
+printStudentNames	09/read.js	/^var printStudentNames = function(studentList){$/;"	f
+rectangle	03/read.rb	/^  def self.rectangle(a,b)$/;"	F	class:Area
+render	07/practice.rb	/^  def render$/;"	f	class:Page
+render	07/read.rb	/^  def render$/;"	f	class:Page
+render	08/lib/Page.rb	/^  def render$/;"	f	class:Page
+repeater	02/read.rb	/^def repeater(string, repeat)$/;"	f
+school	09/read.js	/^var school = "Hacker School";$/;"	v
+square	02/read.rb	/^def square(number)$/;"	f
+square	03/read.rb	/^  def self.square(n)$/;"	F	class:Area
+text_to_i	07/support/gag_digestor.rb	/^  def text_to_i(text)$/;"	f	class:GagDigestor
+to_a	07/support/gag_digestor.rb	/^  def to_a$/;"	f	class:GagDigestor
+to_csv	05/lib/hacker.rb	/^  def to_csv$/;"	f	class:Intern
+to_gag	07/support/gag_digestor.rb	/^  def to_gag$/;"	f	class:GagDigestor
+to_s	05/lib/hacker.rb	/^  def to_s$/;"	f	class:Intern
